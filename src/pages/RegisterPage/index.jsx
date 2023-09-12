@@ -34,6 +34,8 @@ function RegisterPage() {
 
     // state 처음에 "" 값이므로 값을 바꿔줘야 함
     // 그리고 외부 api로 호출해야함
+    // 자동완성 된걸로 회원가입하면 400 오류
+    // 페이지에서 1초정도 기다렸다가 바꾸고 회원가입해야지 400안뜸
     const handleSignInClick = async () => {
         console.log(email,password)
         // 회원가입 데이터
