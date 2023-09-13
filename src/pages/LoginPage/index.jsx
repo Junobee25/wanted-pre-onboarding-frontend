@@ -1,13 +1,20 @@
-import React, {useState } from "react";
+import React, {useState,useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function LoginPage() {
-
+    const navigate = useNavigate();
+    const jwtToken = localStorage.getItem('jwtToken');
+    useEffect(() => {
+        if (!jwtToken) {
+            navigate('/signin');
+        }
+        else{
+            navigate('/todo')
+        }
+    }, [jwtToken,navigate]); // 빈 배열을 전달하여 컴포넌트가 마운트된 후에 한 번만 실행
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate();
-
     // 에러메세지 -> 처음 상태 => 빈값 
     // 이메일, 비밀번호 마다 => 에러메세지 렌더링 필요할 듯
     // const [emailerror, setEmailError] = useState("");
@@ -52,8 +59,8 @@ function LoginPage() {
             const jwtToken = response.data.access_token;
             // JWT를 로컬 스토리지에 저장
             localStorage.setItem('jwtToken', jwtToken);
-            console.log(localStorage.getItem('jwtToken'))
             navigate('/todo')
+            
         } else {
             console.log("로그인 실패")
         }

@@ -1,11 +1,19 @@
-import React, {useState } from "react";
+import React, {useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function TodoPage() {
+    const navigate = useNavigate();
+    const jwtToken = localStorage.getItem('jwtToken');
+    useEffect(() => {
+
+        if (!jwtToken) {
+            navigate('/signin');
+        }
+    }, [jwtToken,navigate]); // 빈 배열을 전달하여 컴포넌트가 마운트된 후에 한 번만 실행
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const navigate = useNavigate();
+
 
     // 에러메세지 -> 처음 상태 => 빈값 
     // 이메일, 비밀번호 마다 => 에러메세지 렌더링 필요할 듯
