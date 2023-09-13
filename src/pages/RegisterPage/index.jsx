@@ -7,7 +7,6 @@ function RegisterPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
-
     // 에러메세지 -> 처음 상태 => 빈값 
     // 이메일, 비밀번호 마다 => 에러메세지 렌더링 필요할 듯
     // const [emailerror, setEmailError] = useState("");
@@ -16,11 +15,12 @@ function RegisterPage() {
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
-    
+                
     };
 
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
+
     };
 
     // 유효성 검사 변수

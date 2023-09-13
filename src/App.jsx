@@ -2,6 +2,7 @@ import {Routes, Route } from 'react-router-dom';
 import './App.css';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import TodoPage from './pages/TodoPage';
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path='/' element = {<Home/>}/>
       <Route path="/signin" element={<LoginPage/>}/>
       <Route path="/signup" element={<RegisterPage/>}/>
+      <Route path="/todo" element = {<TodoPage/>}/>
     </Routes>
     </div>
 

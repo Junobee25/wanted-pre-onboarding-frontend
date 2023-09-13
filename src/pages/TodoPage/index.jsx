@@ -2,8 +2,7 @@ import React, {useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function LoginPage() {
-
+function TodoPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
@@ -48,14 +47,10 @@ function LoginPage() {
         signupData, { headers: {'Content-Type':'application/json'}});
 
         if (response.status){
-            console.log("로그인 성공")
-            const jwtToken = response.data.access_token;
-            // JWT를 로컬 스토리지에 저장
-            localStorage.setItem('jwtToken', jwtToken);
-            console.log(localStorage.getItem('jwtToken'))
-            navigate('/todo')
+            console.log("회원가입 성공")
+            navigate('/')
         } else {
-            console.log("로그인 실패")
+            console.log("회원가입 실패")
         }
         } catch (error) {
         console.log(error)
@@ -75,4 +70,4 @@ function LoginPage() {
 }
 
 
-export default LoginPage;
+export default TodoPage;
