@@ -22,7 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     <img src = "https://github.com/Junobee25/wanted-pre-onboarding-frontend/assets/109403631/c32b702a-2956-4106-8228-6090b7c334db">
 
 <br>
- 
+   
 * `로그인 버튼 클릭시 로그인 진행 => 로그인 완료 => /todo 경로 이동`
 
     <img src = "https://github.com/Junobee25/wanted-pre-onboarding-frontend/assets/109403631/e35de1eb-41e7-4875-aab8-e9064673e12c">
