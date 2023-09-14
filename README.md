@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Wanted Preonboarding Frontend 사전과제
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### 지원자
+* 배준오
+### 프로젝트 실행 방법
+    $ npm install
+    $ npm start
 
-In the project directory, you can run:
+### 데모 영상
+* `회원가입 로그인 유효성 검사`
+    * 형식에 맞지 않는 아이디 비번 입력 시 로그인/회원가입 버튼 disalbed = "true"
+    * 반대의 경우 disalbed = "false"
 
-### `npm start`
+    <img src = "https://github.com/Junobee25/wanted-pre-onboarding-frontend/assets/109403631/a57d1c3f-999c-43d5-8401-7570e868ca29">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* `회원가입 버튼 클릭시 회원가입 진행 => /signin경로로 이동`
 
-### `npm test`
+    <img src = "https://github.com/Junobee25/wanted-pre-onboarding-frontend/assets/109403631/c32b702a-2956-4106-8228-6090b7c334db">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br>
 
-### `npm run build`
+* `로그인 버튼 클릭시 로그인 진행 => 로그인 완료 => /todo 경로 이동`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    <img src = "https://github.com/Junobee25/wanted-pre-onboarding-frontend/assets/109403631/e35de1eb-41e7-4875-aab8-e9064673e12c">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* `로그인 여부에 따른 리다이렉트 처리 => jwt 토큰`
 
-### `npm run eject`
+    <img src = "https://github.com/Junobee25/wanted-pre-onboarding-frontend/assets/109403631/70574e72-0f62-4216-bfc3-2d76f3782dc1">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* `Todolist 기능 구현`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    <img src = "https://github.com/Junobee25/wanted-pre-onboarding-frontend/assets/109403631/115839e5-0e10-4c9d-863e-44b8add6041a">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

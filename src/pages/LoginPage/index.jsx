@@ -56,6 +56,7 @@ function LoginPage() {
 
         if (response.status){
             console.log("로그인 성공")
+            console.log("토큰 생성")
             const jwtToken = response.data.access_token;
             // JWT를 로컬 스토리지에 저장
             localStorage.setItem('jwtToken', jwtToken);

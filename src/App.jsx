@@ -20,7 +20,6 @@ function Home() {
 }
 
 function App() {
-  localStorage.clear() //테스트용
   return (
     <div className='App'>
     <Routes>
