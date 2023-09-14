@@ -72,11 +72,17 @@ function LoginPage() {
 
     return (
     <div>
-        EMAIL : <input data-testid="email-input" value={email} onChange={handleEmailChange}/>
-        PASSWORD : <input data-testid="password-input" type="password" value={password} onChange={handlePasswordChange}/>
-        <button data-testid="signin-button" onClick={handleSignInClick} disabled={checkValid}>로그인</button>
-
-        
+        <div>        
+            <span>EMAIL : </span>
+        <input data-testid="email-input" value={email} onChange={handleEmailChange}/>
+        </div>
+        <div>
+            <span>PASSWORD : </span>
+            <input data-testid="password-input" type="password" value={password} onChange={handlePasswordChange}/>
+        </div>
+        <div>
+            <button data-testid="signin-button" onClick={handleSignInClick} disabled={checkValid}>로그인</button>
+        </div>   
     </div>
     )
 }

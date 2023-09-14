@@ -3,18 +3,24 @@ import './App.css';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import TodoPage from './pages/TodoPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button ,Row,Col} from 'react-bootstrap';
 
 function Home() {
   return (
-    <div>
-      <div>로그인</div>
-      <div>회원가입</div>
-      <div>투두 리스트</div>
+    <div style={{position:'relative', marginTop:'100px'}}>
+      <Row style={{display:"flex", flexDirection:'column'}}>
+        <Col style={{margin:'5px'}}><Button href='/signin'>로그인</Button></Col>
+        <Col style={{margin:'5px'}}><Button href='/signup'>회원가입</Button></Col>
+        <Col style={{margin:'5px'}}><Button href='/todo'>투두리스트</Button></Col>
+      </Row>
     </div>
+
   )
 }
 
 function App() {
+  localStorage.clear() //테스트용
   return (
     <div className='App'>
     <Routes>

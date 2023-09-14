@@ -7,11 +7,8 @@ function RegisterPage() {
     const jwtToken = localStorage.getItem('jwtToken');
     useEffect(() => {
 
-        if (!jwtToken) {
-            navigate('/signin');
-        }
-        else{
-            navigate('/todo')
+        if (jwtToken) {
+            navigate('/todo');
         }
     }, [jwtToken,navigate]); // 빈 배열을 전달하여 컴포넌트가 마운트된 후에 한 번만 실행
     const [email, setEmail] = useState("");
@@ -70,9 +67,17 @@ function RegisterPage() {
     }
     return (
     <div>
-        EMAIL : <input data-testid="email-input" value={email} onChange={handleEmailChange}/>
-        PASSWORD : <input data-testid="password-input" type="password" value={password} onChange={handlePasswordChange}/>
-        <button data-testid="signup-button" onClick={handleSignInClick} disabled={checkValid}>회원가입</button>        
+        <div> 
+            <span>EMAIL : </span>
+            <input data-testid="email-input" value={email} onChange={handleEmailChange}/> 
+        </div>
+        <div>
+            <span>PASSWORD : </span>
+            <input data-testid="password-input" type="password" value={password} onChange={handlePasswordChange}/>
+            </div>   
+        <div>
+            <button data-testid="signup-button" onClick={handleSignInClick} disabled={checkValid}>회원가입</button>
+        </div>
     </div>
         )
     }

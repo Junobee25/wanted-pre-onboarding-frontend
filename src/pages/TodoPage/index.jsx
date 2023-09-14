@@ -136,21 +136,13 @@ function TodoPage() {
       };
 
     return (
-        <div>
-            <input
-                type="text"
-                data-testid="new-todo-input"
-                value={newTodoText}
-                onChange={(e) => setNewTodoText(e.target.value)}
-            />
-            <button
-                data-testid="new-todo-add-button"
-                onClick={handleAddTodo}
-            >
-                추가
-            </button>
-            <ul>
-                {todos.map((todo) => (
+        <div style={{display:"flex", flexDirection:"column"}}>
+            <div>
+            <input type="text" data-testid="new-todo-input" value={newTodoText} onChange={(e) => setNewTodoText(e.target.value)}/>
+            <button data-testid="new-todo-add-button" onClick={handleAddTodo}>추가</button>
+            </div>
+            <div style={{display:"flex", justifyContent:"center", marginTop:"10px"}}>
+            <ul> {todos.map((todo) => (
                     <li key={todo.id}>
                         {editingTodoId === todo.id ? (
                             <>
@@ -196,6 +188,7 @@ function TodoPage() {
                     </li>
                 ))}
             </ul>
+            </div>
         </div>
     );
 }
